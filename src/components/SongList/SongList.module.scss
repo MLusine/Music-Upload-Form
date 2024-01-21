@@ -1,0 +1,97 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.songList {
+  width: 100%;
+  background: $bg-color-primary;
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+
+    @include respond(tab-port) {
+      max-width: 100%;
+    }
+    @include respond(phone) {
+      max-width: 100%;
+    }
+  }
+  &__table {
+    width: 100%;
+  }
+  &__thead {
+    background: $bg-color-secondary;
+    font-size: 18px;
+
+    & th {
+      padding: 20px 5px;
+      text-align: left;
+    }
+    &__th1 {
+      width: 80px;
+    }
+
+    &__th5 {
+      width: 160px;
+      @include respond(tab-port) {
+        width: 140px;
+      }
+    }
+  }
+  &__tbody {
+    font-size: 24px;
+    opacity: 0.5;
+
+    @include respond(tab-port) {
+      font-size: 20px;
+    }
+
+    @include respond(phone) {
+      font-size: 18px;
+    }
+
+    & tr {
+      background: $bg-color-white;
+    }
+    & tr:hover {
+      cursor: pointer;
+      color: $color-blue;
+      text-decoration: underline;
+    }
+  }
+
+  & td {
+    padding: 20px 5px;
+  }
+
+  &__iconBox {
+    display: flex;
+    gap: 15px;
+    padding-left: 10px;
+
+    @include respond(tab-port) {
+      gap: 8px;
+    }
+    @include respond(phone) {
+      gap: 4px;
+      padding-left: 5px;
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-around;
+    }
+  }
+}
+.icons {
+  width: 20px;
+  height: 20px;
+}

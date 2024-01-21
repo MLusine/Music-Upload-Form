@@ -1,0 +1,44 @@
+  // MEDIA QUERY MANAGER
+  
+//   $breakpoint arguement choices:
+//   - phone  0-600px
+//   - tab-port 600-900px
+//   - tab-land 900-1200px
+//   - big-desktop 1800px +
+  
+//   1em = 16px
+  
+  @mixin respond($breakpointName) {
+    @if $breakpointName == phone {
+      @media only screen and (max-width: 37.5em) {
+        @content;
+      } //600px
+    }
+    @if $breakpointName == tab-port {
+      @media only screen and (max-width: 56.25em) {
+        @content;
+      } //900px
+    }
+    @if $breakpointName == tab-land {
+      @media only screen and (max-width: 75em) {
+        @content;
+      } //1200px
+    }
+    @if $breakpointName == big-desktop {
+      @media only screen and (min-width: 112.5em) {
+        @content;
+      } //1800
+    }
+  }
+  
+  @mixin media-min($breakpoints) {
+    @media all and (min-width: $breakpoints) {
+      @content;
+    }
+  }
+  
+  @mixin media-max($breakpoints) {
+    @media all and (max-width: $breakpoints) {
+      @content;
+    }
+  }

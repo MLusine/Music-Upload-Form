@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.songList {
+  width: 100%;
+  background: #f2f2f2;
+}
+.songList__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  border: 1px solid #808080;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 56.25em) {
+  .songList__container {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .songList__container {
+    max-width: 100%;
+  }
+}
+.songList__table {
+  width: 100%;
+}
+.songList__thead {
+  background: #dbd7d7;
+  font-size: 18px;
+}
+.songList__thead th {
+  padding: 20px 5px;
+  text-align: left;
+}
+.songList__thead__th1 {
+  width: 80px;
+}
+.songList__thead__th5 {
+  width: 160px;
+}
+@media only screen and (max-width: 56.25em) {
+  .songList__thead__th5 {
+    width: 140px;
+  }
+}
+.songList__tbody {
+  font-size: 24px;
+  opacity: 0.5;
+}
+@media only screen and (max-width: 56.25em) {
+  .songList__tbody {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .songList__tbody {
+    font-size: 18px;
+  }
+}
+.songList__tbody tr {
+  background: #fff;
+}
+.songList__tbody tr:hover {
+  cursor: pointer;
+  color: #271dec;
+  text-decoration: underline;
+}
+.songList td {
+  padding: 20px 5px;
+}
+.songList__iconBox {
+  display: flex;
+  gap: 15px;
+  padding-left: 10px;
+}
+@media only screen and (max-width: 56.25em) {
+  .songList__iconBox {
+    gap: 8px;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .songList__iconBox {
+    gap: 4px;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+  }
+}
+
+.icons {
+  width: 20px;
+  height: 20px;
+}/*# sourceMappingURL=SongList.module.css.map */

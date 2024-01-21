@@ -1,0 +1,51 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.MusicUploadForm {
+  width: 100%;
+  background: $bg-color-primary;
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+
+    @include respond(tab-port) {
+      max-width: 100%;
+    }
+
+    @include respond(phone) {
+      max-width: 100%;
+    }
+  }
+  &__uploadBox {
+    width: max-content;
+    border: 1px solid $border-color;
+    background: $bg-color-primary;
+    border-radius: 5px;
+    padding: 10px;
+
+    &__btn {
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+
+      @include respond(phone) {
+        font-size: 14px;
+      }
+    }
+    @include respond(phone) {
+      margin: 0 auto;
+    }
+  }
+  &__uploadInput {
+    font-size: 18px;
+  }
+}
